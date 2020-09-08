@@ -31,6 +31,5 @@ SELECT       `ProductID`, Country,
              COUNT(`ProductID`) AS `most_ordered`
     FROM     `OrderDetails`, Customers
     WHERE Country='Germany'
-   
     GROUP BY `ProductID`
     ORDER BY most_ordered DESC;
