@@ -27,6 +27,10 @@ GROUP BY LastName;
 
 #3. What product was ordered the most by customers in Germany?
 ###ANSWER: 
-SELECT COUNTRY CUSTOMERID FROM CUSTOMERS
-SELECT CUSTOMERID ORDERID FROM ORDERS
-SELECT AND JOIN ORDERID FROM ORDERS AND ORDERID QUANTITTY FROM ORDERDETAILS
+SELECT       `ProductID`, Country,
+             COUNT(`ProductID`) AS `most_ordered`
+    FROM     `OrderDetails`, Customers
+    WHERE Country='Germany'
+   
+    GROUP BY `ProductID`
+    ORDER BY most_ordered DESC;
