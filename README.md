@@ -35,3 +35,4 @@ SELECT       `ProductID`, Country,
     WHERE Country='Germany'
     GROUP BY `ProductID`
     ORDER BY most_ordered DESC;
+    ###Product 31, 59, 72 all had 154 orders by customers Germany.
